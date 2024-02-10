@@ -56,4 +56,5 @@ img {
   display: block;
   padding-bottom: 1rem;
   margin: 0 auto;
+  max-width: 10rem;
 }
