@@ -10,7 +10,7 @@
     <title>Dzīvnieku Skaņas</title>
     <meta name="description" content="Mācies dzīvnieku skaņas.">
     <link rel="stylesheet" href="style.css">
-    <script src="jquery.min.js"></script>
+    
     <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener("load", () => {
@@ -111,10 +111,21 @@
     </div>
 
     <script>
-        $(".animal").on("click", function() {
-            $(this).find('audio').trigger("play");
-            console.log('Playing');
-          });
+        let sounds = document.querySelectorAll("audio");
+        let animals = document.querySelectorAll(".animal");
+
+        let sound;
+        animals.forEach(function(animal){
+            animal.addEventListener("click", function(){
+                animal.classList.add("clicked");
+                sound = "." + animal.classList[1] + " audio";
+                document.querySelector(sound).play();
+
+                setTimeout(function(){
+                    animal.classList.remove("clicked");
+                }, 1800);
+            });
+        });
     </script>
 </body>
 </html>
