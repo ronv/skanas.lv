@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+    <link rel="shortcut icon" type="image/png" href="./icons/512x512.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#f7f7f7"/>
+                 
+    <title>Dzīvnieku Skaņas</title>
+    <meta name="description" content="Mācies dzīvnieku skaņas.">
+    <link rel="stylesheet" href="style.css">
+    <script src="jquery.min.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener("load", () => {
+                navigator.serviceWorker.register('service-worker.js').then(function(registration) {
+                    console.log('ServiceWorker registered');
+                  }).catch(function(err) {
+                    console.log('ServiceWorker error: ', err);
+                  });
+            })
+        }
+    </script>   
+</head>
+<body>
+    <div id="horse" class="animal">
+        <img src="./images/horse.png"/>
+        <audio src="./sounds/horse.mp3"></audio>Zirgs
+    </div>
+    <div id="duck" class="animal">
+        <img src="./images/duck.png"/>
+        <audio src="./sounds/duck.mp3"></audio>Pīle
+    </div>
+    <div id="cow" class="animal">
+        <img src="./images/cow.png"/>
+        <audio src="./sounds/cow.mp3"></audio>Govs
+    </div>
+    <div id="cat" class="animal">
+        <img src="./images/cat.png"/>
+        <audio src="./sounds/cat.mp3"></audio>Kaķis
+    </div>
+    <div id="ape" class="animal">
+        <img src="./images/ape.png"/>
+        <audio src="./sounds/ape.mp3"></audio>Pērtiķis
+    </div>
+    <div id="pig" class="animal">
+        <img src="./images/pig.png"/>
+        <audio src="./sounds/pig.mp3"></audio>Cūka
+    </div>
+    <div id="zebra" class="animal">
+        <img src="./images/zebra.png"/>
+        <audio src="./sounds/zebra.mp3"></audio>Zebra
+    </div>
+    <div id="turkey" class="animal">
+        <img src="./images/turkey.png"/>
+        <audio src="./sounds/turkey.mp3"></audio>Tītars
+    </div>
+    <div id="lion" class="animal">
+        <img src="./images/lion.png"/>
+        <audio src="./sounds/lion.mp3"></audio>Lauva
+    </div>
+    <div id="rooster" class="animal">
+        <img src="./images/rooster.png"/>
+        <audio src="./sounds/rooster.mp3"></audio>Gailis
+    </div>
+    <div id="tiger" class="animal">
+        <img src="./images/tiger.png"/>
+        <audio src="./sounds/tiger.mp3"></audio>Tīģeris
+    </div>
+    <div id="moose" class="animal">
+        <img src="./images/moose.png"/>
+        <audio src="./sounds/moose.mp3"></audio>Alnis
+    </div>
+    <div id="elephant" class="animal">
+        <img src="./images/elephant.png"/>
+        <audio src="./sounds/elephant.mp3"></audio>Zilonis
+    </div>
+    <div id="sheep" class="animal">
+        <img src="./images/sheep.png"/>
+        <audio src="./sounds/sheep.mp3"></audio>Aita
+    </div>
+    <div id="owl" class="animal">
+        <img src="./images/owl.png"/>
+        <audio src="./sounds/owl.mp3"></audio>Pūce
+    </div>
+
+    <div id="wolf" class="animal">
+        <img src="./images/wolf.png"/>
+        <audio src="./sounds/wolf.mp3"></audio>Vilks
+    </div>
+
+    <div id="dove" class="animal">
+        <img src="./images/dove.png"/>
+        <audio src="./sounds/dove.mp3"></audio>Balodis
+    </div>
+
+    <div id="dog" class="animal">
+        <img src="./images/dog.png"/>
+        <audio src="./sounds/dog.mp3"></audio>Suns
+    </div>
+
+    <div id="frog" class="animal">
+        <img src="./images/frog.png"/>
+        <audio src="./sounds/frog.mp3"></audio>Varde
+    </div>
+
+    <div id="panda" class="animal">
+        <img src="./images/panda.png"/>
+        <audio src="./sounds/panda.mp3"></audio>Panda
+    </div>
+
+    <script>
+        $(".animal").on("click", function() {
+            $(this).find('audio').trigger("play");
+            console.log('Playing');
+          });
+          
+          
+    </script>
+</body>
+</html>
