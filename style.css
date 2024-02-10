@@ -42,8 +42,7 @@ body {
 
 .animal {
   text-align: center;
-  margin: 0.5%;
-  padding: 4rem 0;
+  padding: 2rem 0;
   border: 1px solid #e3e3e3;
   background:#fff;
   cursor: pointer;
