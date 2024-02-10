@@ -1,11 +1,5 @@
 /* CSS */
-:root {
-  font-family: Inter, sans-serif;
-  font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
-}
-@supports (font-variation-settings: normal) {
-  :root { font-family: InterVariable, sans-serif; }
-}
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,700;1,700&display=swap');
 * {
   box-sizing: border-box;  
 }
@@ -15,6 +9,9 @@
 body {
   background: #f7f7f7;
   color: #333;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
   font-size: 20px;
   --max-columns: 4;
   --min-column-width: 12rem;
