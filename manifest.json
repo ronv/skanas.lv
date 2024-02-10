@@ -4,8 +4,8 @@
     "background_color": "#f7f7f7",
     "display": "fullscreen",
     "orientation": "portrait",
-    "scope": "https://ronaldsvilcins.com/dzivnieki/",
-    "start_url": "https://ronaldsvilcins.com/dzivnieki/",
+    "scope": "https://skanas.lv/",
+    "start_url": "https://skanas.lv/",
     "icons": [
         {
             "src": "icons/16x16.png",
